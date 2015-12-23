@@ -360,6 +360,7 @@ ul.social li.dribbble a:hover {color: rgb(234,76,137);}
 	}
 	div#welcome_section {
 		margin-top: 100px;
+		height: 500px;
 	}
 	h1.main_title {
 	    font-size: 3.2666em;
@@ -373,8 +374,14 @@ ul.social li.dribbble a:hover {color: rgb(234,76,137);}
 
 }
 @media (max-width: 599px) {
+	h3 {
+		font-size: 2.2rem;
+	}
 	.first-row {
 		margin-bottom: 0;
+	}
+	div.about_us {
+	    text-align: center;
 	}
 	div.about_us img, 
 	div.portfolio_img img, 
@@ -388,6 +395,8 @@ ul.social li.dribbble a:hover {color: rgb(234,76,137);}
 	.back-to-top span {
 		display: none;
 	}
+}
+@media (max-width: 550px) {
 	nav#main_nav,
 	nav#main_nav.scrolled {
 	    margin-top: 21px;
@@ -398,8 +407,5 @@ ul.social li.dribbble a:hover {color: rgb(234,76,137);}
 	nav#main_nav a {
 		font-size: 1rem;
 	    padding: 4px 4px 2px;
-	}
-	div.logo a img {
-		max-width: 50px;
 	}
 }
