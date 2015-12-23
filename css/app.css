@@ -1,0 +1,405 @@
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- General Content
+- Typography
+- Header & Navigation
+- Images & Media
+- Footer
+- Media Queries	
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* General Content
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+::-webkit-input-placeholder {
+   color: #222;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #222; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #222;
+}
+
+:-ms-input-placeholder {  
+   color: #222;  
+}
+#overlay {
+	background: rgba(0,0,0,0.8);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	opacity: 0;
+	text-align: center;
+	transition: all .25s linear;
+	z-index: 9999;
+}
+#overlay img {
+	max-width: 80%;
+ 	margin-top: 5%;
+}
+#overlay p {
+  	color: white;
+}
+.overlay_img {
+    background: rgba(0,0,0,0.8);
+    height: 100%;
+    display: block;
+    position: absolute;
+    width: 56.6666666667%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .25s linear;
+}
+.overlay_img i{
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+    text-align: center;
+	color: #fff;
+    position:relative;
+    opacity: 0;
+    transition: opacity 0.5s 0s ease-in-out;
+}
+#contact .mask:hover .overlay_img{
+	opacity: 1;
+	visibility: visible;
+}
+.overlay_img:hover i {
+   opacity:1;
+   transition-delay: 0.3s;
+}
+.row {
+	position: relative;
+}
+div#welcome_section .container {
+	top: 32%;
+    position: relative;
+}
+div.about_us {
+	padding: 50px 0 90px;
+}
+div.portfolio {
+	background-color: #5b866b;
+	padding: 80px 0 90px;
+}
+div.portfolio i {
+    color: #fff;
+    position: relative;
+    top: 9px;
+    font-size: 2.5em;
+}
+.first-row {
+	margin-bottom: .7em;
+}
+form.contact_us_form input, 
+form.contact_us_form textarea,
+form.contact_us_form button {
+	border-radius: 0;
+	transition: all .2s linear;
+}
+form.contact_us_form input, 
+form.contact_us_form textarea {
+	display: block;
+	width: 100%;
+    padding-top: 15px;
+    background-color: #ebebeb;
+    border-color: #ebebeb;
+}
+form.contact_us_form input {
+	min-height: 60px;
+	margin-bottom: 22px;
+}
+form.contact_us_form textarea {
+	resize: none;
+	min-height: 175px;
+	margin-bottom: 32px;
+}
+form.contact_us_form button {
+	position: relative;
+	float: right;
+	padding-top: 2px;
+	width: 150px;
+	min-height: 60px;
+	margin-bottom: 0;
+	background-color: #5b866b;
+	border-color: #5b866b;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 1.6em;
+	font-weight: normal;
+}
+form.contact_us_form button i {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 17px;
+    transition: all .2s linear;
+    right: 30px;
+}
+form.contact_us_form button:hover i {
+    opacity: 1;
+    visibility: visible;
+    right: 15px;
+}
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+header.main_header,
+div.welcome_text,
+h2 {
+	text-align: center;
+}
+h1.main_title {
+	font-size: 4.2666em;
+}
+h2 {
+	font-size: 3.2em;
+	color: #524741;
+}
+h1.main_title,
+h2.subheading,
+h2.portfolio_heading {
+	line-height: 1;
+	color: #fff;
+}
+.heading {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+h2.subheading {
+	font-style: italic;
+}
+h2#about_us_heading {
+	line-height: 1;
+	margin-bottom: 44px;
+}
+h2.portfolio_heading {
+   margin-bottom: 38px;
+}
+h2.contact_us_heading {
+    margin: 27px 0 32px;
+}
+h3 {
+	font-weight: bold;
+	color: #86765c;
+}
+
+
+/* Header & Navigation
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+header.main_header {
+    padding: 50px 0 23px;
+    position: fixed;
+    width: 100%;
+    height: 152px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 100;
+    transition: all 0.4s ease;
+}
+header.main_header.scrolled {
+    padding: 20px 0;
+    height: 60px;
+    border-bottom: 1px solid #86765c;
+}
+nav#main_nav {
+	margin-top: 35px;
+	transition: all 0.4s ease;
+}
+nav#main_nav.scrolled {
+	margin-top: 19px;
+    display: inline-block;
+    float: right;
+}
+nav#main_nav ul,
+nav#main_nav li {
+	margin: 0;
+}
+nav#main_nav li {
+	list-style-type: none;
+	display: inline-block;
+}
+nav#main_nav li+li:before {
+	padding: 0 8px;
+    color: #ccc;
+    content: "|";
+}
+nav#main_nav a {
+	padding: 7px 8px 5px;
+	color: #5b866b;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all .2s linear;
+}
+nav#main_nav a:hover,
+.active {
+	color: #fff !important;
+	background-color: #b98c48;
+}
+header.main_header.scrolled .logo {
+	display: inline-block;
+    float: left;
+}
+
+
+/* Images & Media
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+div.logo a img {
+	max-width: 86px;
+	height: auto;
+	background-size: contain;
+}
+div.logo.scrolled a img {
+	max-width: 60px;
+}
+div#welcome_section {
+	width: 100%;
+	height: 650px;
+    margin-top: 225px;
+	background: linear-gradient(
+			      rgba(45,62,163,0.75),
+			      rgba(45,62,163,0.75)
+			    ),
+				url('../img/twotrees.jpg') no-repeat center center; 
+	background-blend-mode: exclusion;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+}
+div.about_us img,
+div.portfolio_img img,
+div.contact_us img {
+	max-width: 100%;
+	height: auto;
+	transition: all .25s linear;
+	-webkit-backface-visibility: hidden; 
+}
+div.about_us img:hover,
+div.portfolio_img img:hover {
+	opacity: .8;
+}
+div.contact_us .map-image {
+    background-image: url('../img/google_maps.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    display: block;
+    height: 550px;
+}
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul.social {
+	display: block;
+	margin: 47px 0 20px;
+	list-style-type: none;
+	text-align: left;
+}
+ul.social li {
+	display: inline;
+	padding-right: 10px;
+}
+ul.social li a {
+	color: #afafaf;
+    transition: all .2s ease-in-out;
+}
+ul.social li.facebook a:hover {color: rgb(59,89,152);}
+ul.social li.twitter a:hover {color: rgb(0,172,237);}
+ul.social li.google a:hover {color: rgb(219,71,51);}
+ul.social li.pinterest a:hover {color: rgb(189,8,28);}
+ul.social li.dribbble a:hover {color: rgb(234,76,137);}
+.back-to-top a{
+	color: #524741;
+	font-size: .93em;
+	text-decoration: none;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.back-to-top span {
+	padding-right: 10px;
+}
+.back-to-top i {
+	color: #fff;
+	background-color: #b98c48;
+	opacity: 1;
+    padding: 17.5px;
+    transition: all .2s linear;
+}
+.back-to-top i:hover {
+	background-color: #a47c3f;
+}
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (max-width: 1024px) {
+	body {
+		font-size: 1.3em;
+	}
+	header.main_header {
+	    padding: 20px 0;
+	    height: 60px;
+	}
+	nav#main_nav {
+		margin-top: 19px;
+	    display: inline-block;
+	    float: right;
+	}
+	div.logo {
+		display: inline-block;
+    	float: left;
+	}
+	div.logo a img {
+		max-width: 60px;
+	}
+	div#welcome_section {
+		margin-top: 100px;
+	}
+	h1.main_title {
+	    font-size: 3.2666em;
+	}
+	h2 {
+    	font-size: 2.2em;
+	}
+	h3 {
+	    font-size: 2.6rem;
+	}
+
+}
+@media (max-width: 599px) {
+	.first-row {
+		margin-bottom: 0;
+	}
+	div.about_us img, 
+	div.portfolio_img img, 
+	div.contact_us img {
+		width: 100%;
+	}
+	.overlay_img {
+		width: 100%;
+		height: 550px;
+	}
+	.back-to-top span {
+		display: none;
+	}
+	nav#main_nav,
+	nav#main_nav.scrolled {
+	    margin-top: 21px;
+	}
+	nav#main_nav li+li:before {
+		content: none;
+	}
+	nav#main_nav a {
+		font-size: 1rem;
+	    padding: 4px 4px 2px;
+	}
+	div.logo a img {
+		max-width: 50px;
+	}
+}
